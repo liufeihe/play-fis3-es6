@@ -12,13 +12,15 @@
     <span id="span-a-text"></span>
     <p id="span-d-text"></p>
     <button id="changeTextSync">change</button>
-    <button id="changeTextAsync">change later</button>
+    <button id="changeTextWithPromise">change with promise</button>
+    <button id="changeTextWithAsync">change with async</button>
 
     <script type="text/javascript" src="./libs/jquery-1.11.1.js"></script>
     <!-- <script type="text/javascript" src="./page/pageA.es6"></script> -->
     <script type="text/javascript" src="./pages/pageD.js"></script>
     <script type="text/javascript">
         require('./pages/pageA')
+        require('./node_modules/babel-runtime')
     </script>
 </body>
 </html>

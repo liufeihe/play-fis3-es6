@@ -1,6 +1,6 @@
 import {getDateStr} from '/modules/date.es6';
 import {getTextStr} from '/modules/text.es6';
-import {getDataSync, getDataAsync} from '/modules/data.es6';
+import {getDataSync, getDataWithPromise, getDataWithAsync} from '/modules/data.es6';
 
 $(document).ready(function(){
     const setSpan = (str, text) => {
@@ -13,12 +13,21 @@ $(document).ready(function(){
             $('#span-d-text').text(text);
         });
 
-        $('#changeTextAsync').click(()=>{
-            getDataAsync().then(fullfilled=>{
+        $('#changeTextWithPromise').click(()=>{
+            getDataWithPromise().then(fullfilled=>{
                 $('#span-d-text').text(fullfilled);
             }, rejected=>{
                 $('#span-d-text').text('failed.');
             });
+        });
+
+        $('#changeTextWithAsync').click(async ()=>{
+            try {
+                let result = await getDataWithAsync();
+                $('#span-d-text').text(result);
+            } catch (error) {
+                alert(error)
+            }
         });
     }
     

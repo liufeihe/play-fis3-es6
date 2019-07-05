@@ -4,7 +4,10 @@
 //     parser: fis.plugin('es6-babel')
 //   });
 fis.match('*.es6', {
-  parser: fis.plugin('babel-6.x'),
+  parser: fis.plugin('babel-6.x', {
+    // presets: ['env', 'stage-3'],
+    plugins:['transform-runtime']
+  }),
   rExt: '.js'
 });
   

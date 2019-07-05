@@ -2,7 +2,7 @@ const getDataSync = ()=>{
     return 'hello java';
 }
 
-const getDataAsync = ()=>{
+const getDataWithPromise = ()=>{
    return new Promise((reslove, reject)=>{
        setTimeout(()=>{
            reslove('hello javascipt.')
@@ -10,4 +10,16 @@ const getDataAsync = ()=>{
    })
 }
 
-export {getDataSync, getDataAsync}
+const getDataWithAsync = async ()=>{
+    return new Promise((reslove, reject)=>{
+        setTimeout(()=>{
+            reslove('hello python.')
+        }, 3000)
+    })
+}
+
+export {
+    getDataSync, 
+    getDataWithPromise,
+    getDataWithAsync
+}
