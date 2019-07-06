@@ -3,31 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "_babel-plugin-transform-runtime@6.23.0@babel-plugin-transform-runtime": "^6.23.0",
-    "_babel-runtime@6.26.0@babel-runtime": "^6.26.0",
-    "_core-js@2.6.9@core-js": "^2.6.9",
-    "_regenerator-runtime@0.11.1@regenerator-runtime": "^0.11.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-runtime": "^6.26.0",
-    "regenerator-runtime": "^0.11.1",
-    "core-js": "^2.6.9"
-  },
-  "devDependencies": {
-    "fis3": "^3.4.41",
-    "fis3-postpackager-loader": "^2.1.11"
-  },
   "scripts": {
+    "run": "fis3 server start",
+    "stop": "fis3 server stop",
+    "clean": "fis3 server clean",
+    "build": "fis3 release -d ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/liufeihe/play-fis3-es6.git"
+    "url": "''"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/liufeihe/play-fis3-es6/issues"
-  },
-  "homepage": "https://github.com/liufeihe/play-fis3-es6#readme"
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "fis-parser-babel-6.x": "^6.24.1",
+    "fis3": "^3.4.41",
+    "fis3-hook-commonjs": "^0.1.31",
+    "fis3-postpackager-loader": "^2.1.11"
+  }
 }
