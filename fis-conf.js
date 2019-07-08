@@ -6,7 +6,7 @@
 fis.match('*.es6', {
   parser: fis.plugin('babel-6.x', {
     // presets: ['env', 'stage-3'],
-    plugins:['transform-runtime']
+    // plugins:['transform-runtime']
   }),
   rExt: '.js'
 });
