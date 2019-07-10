@@ -1,6 +1,6 @@
 import {getDateStr} from '/modules/date.es6';
 import {getTextStr} from '/modules/text.es6';
-import {getDataSync, getDataWithPromise} from '/modules/data.es6';
+import {getDataSync, getDataWithPromise, getDataWithAsync} from '/modules/data.es6';
 import {MyTable} from '/components/table/table.es6';
 
 $(document).ready(function(){
@@ -23,14 +23,14 @@ $(document).ready(function(){
             });
         });
 
-        // $('#changeTextWithAsync').click(async ()=>{
-        //     try {
-        //         let result = await getDataWithAsync();
-        //         $('#span-d-text').text(result);
-        //     } catch (error) {
-        //         alert(error)
-        //     }
-        // });
+        $('#changeTextWithAsync').click(async ()=>{
+            try {
+                let result = await getDataWithAsync();
+                $('#span-d-text').text(result);
+            } catch (error) {
+                alert(error)
+            }
+        });
 
         $('#changeTableText').click(()=>{
             let num = parseInt(Math.random()*1000)
