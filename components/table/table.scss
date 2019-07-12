@@ -1,3 +1,6 @@
+$greenColor: green;
+
 #component-table {
-    background-color: green;
+    background-color: $greenColor;
+    color: white;
 }

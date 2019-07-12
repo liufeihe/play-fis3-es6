@@ -22,8 +22,17 @@ fis.match('*.es6', {
   }),
   rExt: '.js'
 });
-  
-  
+
+fis.match('*.scss', {
+  parser: fis.plugin('node-sass', {
+    // options...
+  }),
+  rExt: '.css'
+})
+fis.match('*.{js,es,es6,jsx,ts,tsx}', {
+  preprocessor: fis.plugin('js-require-css')
+})
+
   
 // 开启模块化开发
 // fis.match('/{node_modules}/**.js', {//这个配置不对，不应该用{}，导致我找了好久的原因
