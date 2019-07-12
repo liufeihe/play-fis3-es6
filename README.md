@@ -1,5 +1,5 @@
 # play-fis3-es6
-import module and es6 feature for js project with fis3
+import module && es6 feature for multipages project with fis3
 
 # 需要安装的模块
 cnpm i -g fis3
