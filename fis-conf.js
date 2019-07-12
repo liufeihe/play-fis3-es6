@@ -1,13 +1,13 @@
-fis.set('project.ignore',['output/**', '.git/**', 'fis-conf.js']);
+// fis.set('project.ignore',['output/**', '.git/**', 'fis-conf.js']);
 
 // fis.match('node_modules/babel-runtime/{*,**/*}.js', {
 //   packTo: 'babel-runtime/',
 //   isMod: true
 // })
-fis.match('node_modules/(**.js)', {
-  isMod: true,
-  release: '/$1'
-});
+// fis.match('node_modules/(**.js)', {
+//   isMod: true,
+//   release: '/$1'
+// });
 
 
 // 启用 es6-babel 插件，解析 .es6 后缀为 .js
@@ -26,11 +26,23 @@ fis.match('*.es6', {
   
   
 // 开启模块化开发
-fis.hook('commonjs');
+// fis.match('/{node_modules}/**.js', {//这个配置不对，不应该用{}，导致我找了好久的原因
+//   isMod: true,
+//   useSameNameRequire: true
+// });
+fis.match('/node_modules/**.js', {
+  isMod: true,
+  useSameNameRequire: true
+});
 fis.match('*.es6', {
   isMod: true
 });
 
+fis.hook('commonjs', {
+  extList: ['.js', '.jsx', '.es6', '.es', '.ts', '.tsx']
+});
 fis.match('::package', {
   postpackager: fis.plugin('loader')
 });
+fis.unhook('components');
+fis.hook('node_modules');
