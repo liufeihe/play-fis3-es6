@@ -33,3 +33,4 @@ fis3 release -d ./dist
 
 # 参考
 http://fis.baidu.com/fis3/docs/common-plugin.html
+<br>https://github.com/fex-team/fis3-hook-node_modules
