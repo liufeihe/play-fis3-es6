@@ -3,26 +3,25 @@ import module and es6 feature for js project with fis3
 
 # 需要安装的模块
 
-<br>cnpm i -g fis3
+cnpm i -g fis3
 <br>cnpm i -g fis3-postpackager-loader
 
-<br>支持es6
-<br>cnpm i -g fis-parser-babel-6.x<br>
-<br>cnpm i -S babel-plugin-transform-runtime<br>
+支持es6
+<br>cnpm i -g fis-parser-babel-6.x
+<br>cnpm i -S babel-plugin-transform-runtime
 
-<br>支持模块化
+支持模块化
 <br>cnpm i -g fis3-hook-commonjs
 <br>cnpm i -g fis3-hook-node_modules
 
-<br>支持sass/scss转为css
+支持sass/scss转为css
 <br>cnpm i -g fis-parser-node-sass
 
-<br>支持在js中引用css
+支持在js中引用css
 <br>cnpm i -g fis3-preprocessor-js-require-css
 
 
 # 使用fis3 server调试：
-
 <br>fis3 release
 <br>fis3 server start
 <br>fis3 server stop
