@@ -50,8 +50,9 @@ fis.match('*.es6', {
 fis.hook('commonjs', {
   extList: ['.js', '.jsx', '.es6', '.es', '.ts', '.tsx']
 });
+fis.unhook('components');
+fis.hook('node_modules');
+
 fis.match('::package', {
   postpackager: fis.plugin('loader')
 });
-fis.unhook('components');
-fis.hook('node_modules');
