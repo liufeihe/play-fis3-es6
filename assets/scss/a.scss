@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+body {
+    background-color: $bgGrey;
+}
+div.bg-image{
+    background: url('../images/app_banner.jpg') no-repeat bottom/cover;
+    height: 650px;
+    position: relative;
+    min-width: 1200px;
+}

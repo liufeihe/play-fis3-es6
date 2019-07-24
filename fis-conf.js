@@ -15,7 +15,7 @@
 //     rExt: '.js',
 //     parser: fis.plugin('es6-babel')
 //   });
-fis.match('*.es6', {
+fis.match('*.es6', {//对.es6后缀的文件，需要用babel将es6的代码转换为es5的
   parser: fis.plugin('babel-6.x', {
     // presets: ['env', 'stage-3'],
     plugins:['transform-runtime']
@@ -24,12 +24,12 @@ fis.match('*.es6', {
 });
 
 fis.match('*.scss', {
-  parser: fis.plugin('node-sass', {
+  parser: fis.plugin('node-sass', {//将scss文件解析为css
     // options...
   }),
   rExt: '.css'
 })
-fis.match('*.{js,es,es6,jsx,ts,tsx}', {
+fis.match('*.{js,es,es6,jsx,ts,tsx}', {//可以在js文件中require scss文件，有利于组件化
   preprocessor: fis.plugin('js-require-css')
 })
 
